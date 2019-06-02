@@ -170,10 +170,13 @@ user-select: none;
 }
 .wrapheader{
   text-align: center;
-  background: $ltgray;
+  background: $ltgray !important;
+  position: relative;
+  top: -20px;
 }
 #contactform{
   background:$ltgray;
   color: $dgray;
   padding: 5px;
+  display: none;
 }
