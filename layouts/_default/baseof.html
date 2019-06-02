@@ -32,6 +32,7 @@
   {{$init := resources.Get "js/init.js" }}
   {{$js := slice $datetime $temp $newline $cards $init | resources.Concat "main.js" | resources.Minify | resources.Fingerprint}}
   <script src="{{ $js.RelPermalink }}"></script>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap" rel="stylesheet">
 </body>
 
 </html>

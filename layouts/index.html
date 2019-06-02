@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <div class="container-fluid">
-  <div class="row">
+  <div class="row justify-content-center">
 
     <div id="consoleinfo" class="col-12">
       <p>Date</p>
@@ -29,11 +29,52 @@
       </pre>
     </div>
 
-    <div class="col" id="console">
+    <div class="col-12" id="console">
+
       <p><span class="precommand">root@guyaldous.com:~$ </span><span id="0"></span><span id="blinker">_</span></p>
 
       {{ .Content }}
 
+    </div>
+    <div class="col-10 col-lg-8 text-center" id="links">
+      <div class="borderwrap">
+        <a href="https://linkedin.com/in/guy-aldous-691612146/">
+          < Linkedin>
+        </a><a href="https://lysdexia.digital">
+          < Lysdexia Digital>
+        </a><a href="/">
+          < Contact>
+        </a>
+      </div>
+    </div>
+    <div class="col-12" id="memes">
+
+    </div>
+
+    <div id="contactform">
+      <div class="borderwrap">
+        <p class="wrapheader">Contact</p>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <!--<p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Leader</option>
+      <option value="follower">Follower</option>
+    </select></label>
+  </p>-->
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+    </div>
     </div>
   </div>
 </div>

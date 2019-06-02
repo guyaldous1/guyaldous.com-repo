@@ -14,6 +14,7 @@ $white: #F1F1F1;
 body{
   background: $dgray;
   color: $white;
+  font-family: 'Ubuntu Mono', monospace;
 }
 #wrapper{
   border:3px solid $lgray;
@@ -58,6 +59,12 @@ nav{
     border-left-color: $ltgray;
     border-right-color: $dgray;
     border-bottom-color: $dgray;
+    &:hover{
+      border-top-color: $dgray;
+      border-left-color: $dgray;
+      border-right-color: $ltgray;
+      border-bottom-color: $ltgray;
+    }
     .nav-link{
       color:black;
       padding:0px !important;
@@ -131,4 +138,42 @@ user-select: none;
 #cardtime{
   position: absolute;
   top: 0px;
+  z-index: -100;
+}
+#links{
+  opacity: 0;
+  margin-top:20px;
+  margin-bottom:20px;
+  background:$ltgray;
+  padding: 5px;
+  transition: all 0.5s ease;
+  a{
+    display: inline-block;
+    padding:3px 6px;
+    margin:3px;
+    color: $dgray;
+    transition:all 0.1s ease;
+    text-decoration: none !important;
+    &:hover{
+      -webkit-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+      -moz-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+      box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+    }
+  }
+}
+.nowvisible{
+  opacity: 1 !important;
+}
+.borderwrap{
+  border: 1px solid black;
+  padding: 15px;
+}
+.wrapheader{
+  text-align: center;
+  background: $ltgray;
+}
+#contactform{
+  background:$ltgray;
+  color: $dgray;
+  padding: 5px;
 }
