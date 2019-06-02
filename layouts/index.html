@@ -1,6 +1,41 @@
 {{ define "main" }}
 
-<h2>{{ .Title }}</h2>
-    {{ .Content }}
+<div class="container-fluid">
+  <div class="row">
+
+    <div id="consoleinfo" class="col-12">
+      <p>Date</p>
+      <p id="date"></p>
+      <p>Time</p>
+      <p id="time"></p>
+      <p>Temp</p>
+      <p id="temp"></p>
+    </div>
+
+    <div class="col-12">
+
+      <pre id="figlet">
+   __
+ <(o )___
+  ( ._> /                 _     _
+   `---'                 | |   | |
+   __ _ _   _ _   _  __ _| | __| | ___  _   _ ___   ___ ___  _ __ ___
+  / _` | | | | | | |/ _` | |/ _` |/ _ \| | | / __| / __/ _ \| '_ ` _ \
+ | (_| | |_| | |_| | (_| | | (_| | (_) | |_| \__ \| (_| (_) | | | | | |
+  \__, |\__,_|\__, |\__,_|_|\__,_|\___/ \__,_|___(_)___\___/|_| |_| |_|
+   __/ |       __/ |
+  |___/       |___/
+
+      </pre>
+    </div>
+
+    <div class="col" id="console">
+      <p><span class="precommand">root@guyaldous.com:~$ </span><span id="0"></span><span id="blinker">_</span></p>
+
+      {{ .Content }}
+
+    </div>
+  </div>
+</div>
 
 {{end}}

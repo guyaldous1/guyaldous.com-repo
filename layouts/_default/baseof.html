@@ -12,14 +12,20 @@
 </head>
 
 <body>
-  <!--[if IE]>
+  <div id="wrapper">
+    {{partial "nav" .}}
+
+    <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  {{ block "main" . }}
+    <!-- Add your site or application content here -->
+    {{ block "main" . }}
 
-  {{ end }}
+    {{ end }}
+  </div>
+  {{$js := resources.Get "main.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}"></script>
 </body>
 
 </html>

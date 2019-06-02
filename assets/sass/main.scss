@@ -3,7 +3,120 @@
 @import "bootstrap/bootstrap";
 
 //User Styles
+$dgray: #212121;
+$gray: #070707;
+$lgray: #7C7C7C;
+$ltgray: #999999;
+$green: #86f49b;
+$purple: #9192EE;
+$white: #F1F1F1;
 
 body{
-  background: var(--light)
+  background: $dgray;
+  color: $white;
+}
+#wrapper{
+  border:3px solid $lgray;
+  height:100vh;
+  width: 100vw;
+  -webkit-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+  -moz-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+  box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+}
+
+
+p{
+  margin-bottom: 0;
+}
+nav{
+  padding:0 10px !important;
+  border-bottom: 3px solid $lgray;
+  color:$white;
+  font-weight: bold;
+  background: #010080;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #010080 0%, #107fd0 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #010080 0%,#107fd0 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #010080 0%,#107fd0 100%);
+  .navbar-brand{
+    color:white !important;
+  }
+  a{
+    font-size: 0.9rem !important;
+  }
+  .nav-item{
+    text-align: center;
+    background:$lgray;
+    margin: 2px 5px;
+    width:20px;
+    height:20px;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: $ltgray;
+    border-left-color: $ltgray;
+    border-right-color: $dgray;
+    border-bottom-color: $dgray;
+    .nav-link{
+      color:black;
+      padding:0px !important;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+#figlet{
+  color:$lgray;
+  font-size: 0.6rem;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+  @media(max-width: 590px){
+    font-size: 0.5rem;
+  }
+}
+#consoleinfo{
+  position: absolute;
+  color:$lgray;
+  text-align: right;
+  padding-top: 10px;
+  font-size: 0.7rem;
+  #time,#date,#temp{
+    color:$purple;
+  }
+    p{
+      display: inline;
+    }
+
+}
+
+.precommand{
+  color: $green;
+    -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.blinker, #blinker{
+  animation: blink 1.5s step-start 0s infinite;
+  -webkit-animation: blink 1.5s step-start 0s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
