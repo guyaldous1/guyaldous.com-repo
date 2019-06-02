@@ -62,7 +62,8 @@ nav{
       color:black;
       padding:0px !important;
       position: relative;
-      top: -2px;
+      top: -3px;
+      cursor: pointer;
     }
   }
 }
@@ -77,17 +78,23 @@ nav{
 -ms-user-select: none;
 user-select: none;
   @media(max-width: 590px){
-    font-size: 0.5rem;
+    font-size: 0.4rem;
   }
 }
 #consoleinfo{
   position: absolute;
+  right: 0px;
   color:$lgray;
   text-align: right;
   padding-top: 10px;
   font-size: 0.7rem;
+  @media(max-width: 590px){
+    font-size: 0.6rem !important;
+  }
+
   #time,#date,#temp{
     color:$purple;
+
   }
     p{
       display: inline;
@@ -119,4 +126,9 @@ user-select: none;
   50% {
     opacity: 0;
   }
+}
+
+#cardtime{
+  position: absolute;
+  top: 0px;
 }
