@@ -24,7 +24,13 @@
 
     {{ end }}
   </div>
-  {{$js := resources.Get "main.js" | resources.Minify | resources.Fingerprint }}
+
+  {{$datetime := resources.Get "js/datetime.js" }}
+  {{$temp := resources.Get "js/temp.js" }}
+  {{$newline := resources.Get "js/newline.js" }}
+  {{$cards := resources.Get "js/cards.js" }}
+  {{$init := resources.Get "js/init.js" }}
+  {{$js := slice $datetime $temp $newline $cards $init | resources.Concat "main.js" | resources.Minify | resources.Fingerprint}}
   <script src="{{ $js.RelPermalink }}"></script>
 </body>
 
