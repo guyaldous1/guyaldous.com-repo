@@ -85,7 +85,7 @@ nav{
 -ms-user-select: none;
 user-select: none;
   @media(max-width: 590px){
-    font-size: 0.4rem;
+    font-size: 0.3rem;
   }
 }
 #consoleinfo{
@@ -155,6 +155,7 @@ user-select: none;
     color: $dgray;
     transition:all 0.1s ease;
     text-decoration: none !important;
+    cursor: pointer;
     &:hover{
       -webkit-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
       -moz-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
@@ -164,7 +165,7 @@ user-select: none;
 }
 .nowvisible{
   opacity: 1 !important;
-  display: block;
+  display: block !important;
 }
 .borderwrap{
   border: 1px solid black;
@@ -179,6 +180,35 @@ user-select: none;
 #contactform{
   background:$ltgray;
   color: $dgray;
+  z-index: 5;
   padding: 5px;
   display: none;
+  opacity: 0;
+  position: absolute;
+  top:120px;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+  -moz-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+  box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+  input, textarea{
+      background:none;
+      border:1px solid $dgray;
+  }
+  button, a{
+    background: none;
+    border:none;
+    padding: 5px;
+    line-height: 1.2rem;
+    &:hover{
+      -webkit-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+      -moz-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+      box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+    }
+  }
+  a{
+    text-decoration: none !important;
+    color: $dgray;
+    float:right;
+    cursor: pointer;
+  }
 }
