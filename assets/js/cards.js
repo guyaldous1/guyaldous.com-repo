@@ -5,6 +5,14 @@
 			canvas.height = window.innerHeight;
 			document.body.appendChild( canvas );
 
+			function changeWindowSize() {
+				let thecanvas = document.getElementById('cardtime');
+				thecanvas.height = window.innerHeight;
+				thecanvas.width = window.innerWidth;
+			}
+
+			window.onresize = changeWindowSize;
+
 			var context = canvas.getContext( '2d' );
 
 			var id = 52;
