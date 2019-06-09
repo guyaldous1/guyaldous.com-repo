@@ -12,3 +12,8 @@
 # TECHNOLOGY COLOPHON
 
     SASS, Hugo
+
+# Thanks
+
+Cheers to Mr Doob for his excellent card animating effect
+mrdoob.com
