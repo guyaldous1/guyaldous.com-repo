@@ -10,19 +10,70 @@ $ltgray: #999999;
 $green: #86f49b;
 $purple: #9192EE;
 $white: #F1F1F1;
+$yellow: #feca22;
+$red: #f82129;
+
+@mixin transition($t) {
+  -webkit-transition: all $t ease;
+  -moz-transition: all $t ease;
+  -ms-transition: all $t ease;
+  -o-transition: all $t ease;
+  transition: all $t ease;
+}
 
 body{
-  background: $dgray;
+  background: $white;
   color: $white;
   font-family: 'Ubuntu Mono', monospace;
 }
+#homewrap{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  #homepage{
+    color: $dgray;
+    text-align: center;
+    .row{
+      min-height:100vh;
+    }
+    .home-text{
+      display: inline-block;
+    }
+    img{
+      display: inline-block;
+      max-width: 170px;
+      &.inverse{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+    }
+    .click{
+      cursor: pointer;
+      background:$yellow;
+      display: inline-block;
+      padding: 5px 10px;
+      &.red{
+        background:$red;
+        color: $white;
+      }
+    }
+  }
+}
+
 #wrapper{
   border:3px solid $lgray;
+  @include transition(0.4s);
   min-height:100vh;
   width: 100vw;
+  background: $dgray;
   -webkit-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
   -moz-box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
   box-shadow: inset -1px -1px 0px 0px rgba(0,0,0,1);
+  transform-origin: bottom;
+  transform: scale(0);
+  &.visible{
+    transform:scale(1);
+  }
 }
 
 
